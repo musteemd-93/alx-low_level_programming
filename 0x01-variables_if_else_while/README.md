@@ -1,1 +1,1 @@
-Variables,if,else and while project.
+Variabls, if, else and while projects.
