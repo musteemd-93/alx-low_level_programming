@@ -19,7 +19,7 @@ int main(void)
 				if (a != 56 || b != 57)
 				{
 					putchar(',');
-					putchar('~');
+					putchar(' ');
 				}
 			}
 		}
