@@ -2,9 +2,6 @@
 
 /**
  * main - causes an infinite loop
- * i = 0;
- * while (i < 0) { putchar(i); }
- *
  * Return: 0
  */
 int main(void)
