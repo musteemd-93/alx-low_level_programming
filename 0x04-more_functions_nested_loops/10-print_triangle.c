@@ -2,11 +2,11 @@
 
 /**
  * print_triangle - prints a triangle
- * @s: size of the triangle
+ * @size: size of the triangle
  */
-void print_triangle(int s)
+void print_triangle(int size)
 {
-	if (s <= 0)
+	if (size <= 0)
 	{
 		_putchar('\n');
 	}
@@ -14,11 +14,11 @@ void print_triangle(int s)
 	{
 		int i, j;
 
-		for (i = 1; i <= s; i++)
+		for (i = 1; i <= size; i++)
 		{
-			for (j = i; j < s; j++)
+			for (j = i; j < size; j++)
 			{
-				_putchar(' ');
+				_putchar('');
 			}
 
 			for (j = 1; j <= 1; j++)
