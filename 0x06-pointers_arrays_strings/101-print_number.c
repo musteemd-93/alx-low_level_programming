@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_number - Print numbers
+ * print_number - Print numbers chars
  * @n: Integer params
  *
  * Return: 0
@@ -23,5 +23,5 @@ void print_number(int n)
 	{
 		print_number(n1 / 10);
 	}
-	putchar((n1 % 10) + 0);
+	putchar((n1 % 10) + '0');
 }
