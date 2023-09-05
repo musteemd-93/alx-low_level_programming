@@ -3,23 +3,43 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for ALX School students.
- *
- * Return: Always 0.
+ * alloc_grid - Nested loop to make grid
+ * @width: Width input
+ * @height: Height input
+ * Return: Pointer to 2 dimensional array
  */
 int **alloc_grid(int width, int height)
 {
-    int **grid;
+	int **mee;
+	int x, y;
 
-	grid = alloc_grid(6, 4);
-    if (grid == NULL)
-    {
-        return (1);
-    }
+	if (width <= 0 || height <= 0)
+		return (NULL);
 
-    printf("\n");
-    grid[0][3] = 98;
-    grid[3][4] = 402;
-    free_grid(grid, 4);
-    return (0);
+	mee = malloc(sizeof(int *) * height);
+
+	if (mee == NULL)
+		return (NULL);
+
+	for (x = 0; x < height; x++)
+	{
+		mee[x] = malloc(sizeof(int) * width);
+
+		if (mee[x] == NULL)
+		{
+			for (; x >= 0; x--)
+				free(mee[x]);
+
+			free(mee);
+			return (NULL);
+		}
+	}
+
+	for (x = 0; x < height; x++)
+	{
+		for (y = 0; y < width; y++)
+			mee[x][y] = 0;
+	}
+
+	return (mee);
 }
